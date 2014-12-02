@@ -563,7 +563,7 @@ static NSString *MMDrawerOpenSideKey = @"MMDrawerOpenSide";
 }
 
 - (void)setMaximumDrawerWidth:(CGFloat)width forSide:(MMDrawerSide)drawerSide animated:(BOOL)animated completion:(void(^)(BOOL finished))completion{
-    NSParameterAssert(width > 0);
+    NSParameterAssert(width >= 0);
     NSParameterAssert(drawerSide != MMDrawerSideNone);
     
     UIViewController *sideDrawerViewController = [self sideDrawerViewControllerForSide:drawerSide];
